@@ -1,0 +1,37 @@
+{
+  "name": "ecommerce-concierge",
+  "version": "1.0.0",
+  "description": "AI-powered e-commerce shopping assistant with natural language interface",
+  "main": "index.ts",
+  "scripts": {
+    "start": "baml-cli generate && tsx index.ts",
+    "dev": "tsx watch index.ts",
+    "build": "baml-cli generate && tsc",
+    "generate": "baml-cli generate",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "ecommerce",
+    "shopping",
+    "assistant",
+    "chatbot",
+    "baml",
+    "openrouter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@boundaryml/baml": "^0.214.0",
+    "dotenv": "^17.2.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
