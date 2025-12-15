@@ -48,8 +48,8 @@ if (!isDebugMode) {
   
   process.stdout.write = ((
     chunk: string | Uint8Array,
-    encodingOrCallback?: BufferEncoding | ((err?: Error) => void),
-    callback?: (err?: Error) => void
+    encodingOrCallback?: BufferEncoding | ((err?: Error | null) => void),
+    callback?: (err?: Error | null) => void
   ): boolean => {
     const text = typeof chunk === 'string' ? chunk : chunk.toString()
     
@@ -92,8 +92,8 @@ if (!isDebugMode) {
   // Also filter stderr
   process.stderr.write = ((
     chunk: string | Uint8Array,
-    encodingOrCallback?: BufferEncoding | ((err?: Error) => void),
-    callback?: (err?: Error) => void
+    encodingOrCallback?: BufferEncoding | ((err?: Error | null) => void),
+    callback?: (err?: Error | null) => void
   ): boolean => {
     const text = typeof chunk === 'string' ? chunk : chunk.toString()
     
